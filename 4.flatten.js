@@ -21,5 +21,20 @@ const assertEqual = function (actual, expected) {
   };
 };
 
-assertEqual([1, 2, 3], [4, 5, 6]);
-assertEqual([1, 2, 3], [1, 2, 3]);
+// assertEqual([1, 2, 3], [4, 5, 6]);
+// assertEqual([1, 2, 3], [1, 2, 3]);
+// ________________________Is the above needed
+
+function flatten(a) {
+
+  for (let i = 0; i < a.length; i++) {
+    if (Array.isArray(a[i]) === true) {
+      return a.flat();
+    }
+  }
+  // return a;
+}
+// _________________is the loop needed, is Array.is array needed;
+
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+
