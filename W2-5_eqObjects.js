@@ -42,8 +42,6 @@ const eqObjects = function (object1, object2) {
       // console.log("yes, they are both an array");
       if (!eqArrays(object1[key], object2[key])) {
         return false;
-      } else if (object1[key] !== object2[key]) {
-        return false;
       }
     } else {
       // if the keys in the object do not contain an array then ->
@@ -54,6 +52,7 @@ const eqObjects = function (object1, object2) {
   }
   return true;
 };
+
 
 
 const shirtObject = { color: "red", size: "medium" };
