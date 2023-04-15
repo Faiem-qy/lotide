@@ -1,5 +1,5 @@
 
-let eqArrays = function (arr1, arr2) {
+let eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -13,17 +13,9 @@ let eqArrays = function (arr1, arr2) {
 
 
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion passed:${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  };
-};
+const assertEqual = require('./0.assertEqual');
 
-// assertEqual([1, 2, 3], [4, 5, 6]);
-// assertEqual([1, 2, 3], [1, 2, 3]);
-// ________________________Is the above needed
+
 
 function flatten(a) {
 
@@ -32,9 +24,10 @@ function flatten(a) {
       return a.flat();
     }
   }
-  // return a;
+  return a;
 }
-// _________________is the loop needed, is Array.is array needed;
+
 
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
 
+module.exports = flatten;
