@@ -1,5 +1,5 @@
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -12,7 +12,7 @@ const eqArrays = function (arr1, arr2) {
 
 
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion passed:${actual} === ${expected}`);
   } else {
@@ -22,7 +22,7 @@ const assertEqual = function (actual, expected) {
 
 
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
 
@@ -46,7 +46,7 @@ const eqObjects = function (object1, object2) {
 
 
 // FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function (actual, expected) {
+const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
@@ -65,6 +65,7 @@ assertObjectsEqual(obj1, obj2);
 assertObjectsEqual(obj1, obj3);
 // Output: "🛑🛑🛑 Assertion failed: { a: 1, b: 2 } !== { a: 1, b: 3 }"
 
+module.exports = assertObjectsEqual;
 
 
 
